@@ -66,13 +66,13 @@
 }
 
 #answer-buttons .btn.correct {
-    background-color: #A6E3A8 !important;
+    background-color: #A6E3A8;
     color: #113322;
     border-color: #A6E3A8;
 }
 
 #answer-buttons .btn.incorrect {
-    background-color: #E2A6A6 !important;
+    background-color: #E2A6A6;
     color: #270808;
     border-color: #E2A6A6;
 }
