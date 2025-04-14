@@ -1,0 +1,324 @@
+.sun, .planet {
+    will-change: transform, filter;
+    backface-visibility: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poetsen+One&display=swap');
+
+
+:root {
+    --txt-color: #fff;
+    --title-color: #f9f5ed;
+    --menu-color: #080816f7;
+    --font: "Comfortaa", sans-serif, arial;
+    --title-font: "Poetsen One", sans-serif;
+    --sun-size: 75vmin;
+    --planet-distance: 6vmin;
+    --mercury-size: 8vmin;
+    --venus-size: 12vmin;
+    --earth-size: 18vmin;
+    --mars-size: 14vmin;
+    --jupiter-size: 22vmin;
+    --saturn-size: 20vmin;
+    --uranus-size: 16vmin;
+    --neptune-size: 15vmin;
+}
+
+.solar-display h1 {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 1px 2px 1px rgb(39, 39, 39);
+    background-color: #1E0D30;
+    color: var(--title-color);
+    font-family: var(--title-font);
+}
+
+.solar-system {
+    position: relative;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: visible;
+}
+.break {
+    display: none;
+}
+.sun-wrapper {
+    margin-left: -10%;
+    margin-right: -120px;
+    transform: translateX(-30%);
+}
+
+.sun {
+    width: var(--sun-size);
+    height: var(--sun-size);
+    filter: drop-shadow(0 0 15px #ffc06780);
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.planets-container {
+    display: flex;
+    gap: var(--planet-distance); 
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.planet, .sun {
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0; 
+}
+
+.mercury { width: var(--mercury-size); height: var(--mercury-size); top: 60px;}
+.venus {width: var(--venus-size); height: var(--venus-size);top: 50px;}
+.earth {width: var(--earth-size); height: var(--earth-size);}
+.mars {width: var(--mars-size); height: var(--mars-size); top: 55px;}
+.jupiter {width: var(--jupiter-size);height: var(--jupiter-size);}
+.saturn {width: var(--saturn-size); top: 50px;} 
+.uranus {width: 9vmin; height: 9vmin;}
+.neptune {width: 8vmin; height: 8vmin;}
+
+.earth-with-rocket { position: relative; display: inline-block;}
+.earth-with-rocket .rocket-icon {
+    width: 10vmin;
+    height: 10vmin;
+    bottom: 150%;
+    left: -20%;
+    transform: translateX(-50%) rotate(-60deg); 
+    position: absolute;
+}
+
+.solar-display {
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    overflow-x: auto;
+    background-color: rgba(30, 13, 48, 0.192);
+}
+
+#info-panel {
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    position: absolute; 
+    left: 20px; 
+    bottom: 20px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    font-family: var(--font);
+    color: #fff;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; 
+}
+
+#info-panel p {
+    padding-top: 10px;
+}
+
+#planet-name {
+    color: #9995f7;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px rgba(156, 156, 255, 0.463)
+}
+
+.planet:hover ~ #info-panel {
+    opacity: 1;
+}
+
+
+.menu {
+    height: 700px;
+    background-color: var(--menu-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu h2 {
+    padding: 20px;
+    text-align: right;
+    padding-right: 15px;
+    font-size: 45px;
+    color: #dbdada;
+    font-weight: 200;
+}
+
+.menu-footer {
+    display: flex;
+    height: 24em;
+    align-items: flex-end;
+}
+
+.menu-footer p {
+    position: relative;
+    top: 160px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+}
+
+.page-footer {
+    background-color: #000;
+    color: var(--txt-color);
+    font-family: var(--font);
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0px 13px 10px;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0d090d; 
+    border-radius: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+
+img {
+    -webkit-user-drag: none; 
+}
+
+/* animations */
+.sun-wrapper .sun:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px #ff6b00cc) !important;
+}
+
+.planet:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.347));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.rocket-icon:hover {
+    filter: drop-shadow(0 0 10px #00ffff22);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+@keyframes spin-normal {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+    from { transform: rotate(360deg); }
+    to   { transform: rotate(0deg); }
+}
+
+.planet {
+    transition: transform 0.3s ease;
+}
+
+.solar-display:hover .spin-normal {
+    animation: spin-normal 10s linear infinite;
+}
+
+.solar-display:hover .spin-reverse {
+    animation: spin-reverse 10s linear infinite;
+}
+
+
+@media (max-width: 700px) {
+    
+    .solar-system {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .sun-wrapper {
+        position: relative;
+        width: 55vmin;
+        height: 55vmin;
+        margin-right: 10px;
+    }
+
+    .sun {
+        width: 100%;
+        height: 100%;
+    }
+
+    .planet {
+        position: relative;
+        margin: 10px;
+        flex-shrink: 0;
+    }
+
+    .planets-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .break {
+        display: block;
+        flex-basis: 10%;
+    }
+
+    .earth-with-rocket .rocket-icon {
+        display: none;
+    }
+
+    .mercury { top: 0; left: 0; }
+    .venus   { top: px; left: 10px; }
+    .earth   { top: -12px; left: 5px; }
+    .mars    { top: 10px; left: 15px;}
+    .jupiter { top: -5px; left: 40px; }
+    .saturn  { top: 12px; left: 20px; }
+    .uranus  { top: 45px; left: 22px; }
+    .neptune { top: -2px; left: 30px; }
+
+    #info-panel {
+        position: static;
+        margin: 0px auto;
+        width: 90%;
+    }
+}
+
+
+
+@media (hover: none) {
+    .solar-display {
+        perspective: 1000px;
+    }
+    
+    .sun-wrapper, .planets-container {
+        transform-style: preserve-3d;
+        transition: transform 0.1s;
+    }
+}
+
+
+
+
+

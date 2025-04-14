@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <title>Conheça o Sistema Solar</title>
+</head>
+<body>
+    <main>
+        <section class="solar-display">
+            <h1>O Sistema solar</h1>
+            <div class="solar-system">
+                
+                <div class="sun-wrapper">
+                    <img src="assets/images/sun.png" alt="Sol" class="sun">
+                </div>
+            
+                <div class="planets-container">
+                    <img src="assets/images/planet_mercury.png" alt="Mercúrio" class="planet mercury spin-normal">
+                    <img src="assets/images/planet_venus.png" alt="Vênus" class="planet venus spin-reverse">
+                    
+                    <div class="earth-with-rocket">
+                        <img src="assets/images/planet_earth.png" alt="Terra" class="planet earth spin-normal">
+                        <img src="assets/images/rocket.png" alt="Foguete" class="rocket-icon">
+                    </div>
+                    <div class="break"></div>
+                    <img src="assets/images/planet_mars.png" alt="Marte" class="planet mars spin-normal">
+                    <img src="assets/images/planet_jupiter.png" alt="Júpiter" class="planet jupiter spin-normal">
+                    <div class="break"></div>
+                    <img src="assets/images/planet_saturn.png" alt="Saturno" class="planet saturn spin-normal">
+                    <div class="break"></div>
+                    <img src="assets/images/planet_uranus.png" alt="Urâno" class="planet uranus spin-reverse"> 
+                    <img src="assets/images/planet_neptune.png" alt="Netuno" class="planet neptune spin-normal">
+                </div>
+
+                
+                <aside id="info-panel">
+                    <h3 id="planet-name"></h3>
+                    <p>Clique para obter mais informações...</p>
+                </aside>
+            </div>
+
+
+        </section>
+        
+        <section class="menu">
+            <section class="app">
+                <div class="quiz">
+                    <h3 id="question">Question</h3>
+                    <div id="answer-buttons">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                    </div>
+                    <div>
+                        <button id="next-btn">Próximo
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="menu-footer">
+                <a href="#top" class="scroll-top" aria-label="Voltar ao topo">
+                    <p>^</p>
+                </a>
+            </footer>
+
+
+
+
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>
+            <a href="https://github.com/emellydev" 
+               draggable="false" 
+               target="_blank">
+                Desenvolvido por Emelly Beatriz
+            </a>
+        </p>
+    </footer>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/quiz.js"></script>
+</body>
+</html>

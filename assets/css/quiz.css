@@ -1,0 +1,79 @@
+.app {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.app h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    padding-bottom: 15px;
+    margin: 30px 15px;
+    font-weight: 500; 
+    border-bottom: 2px solid #bcbcbc;
+    color: #c7c7c7;
+}
+
+#answer-buttons {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#answer-buttons .btn {
+    padding: 15px 0; 
+    margin: 5px 0; 
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #262329;
+    font-weight: 600;
+    outline: none;
+    transition: all 0.3s
+}
+
+.btn {
+    flex-grow: 1; 
+    flex-shrink: 1; 
+    min-width: 500px; 
+}
+
+#answer-buttons button:enabled:hover {
+    background-color: #331b36c8;
+    color: #dbdbda;
+    cursor: pointer;
+    
+}
+
+#next-btn {
+    padding: 10px 0; 
+    margin: 30px auto; 
+    width: 150px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #30293E;
+    color: #fff;
+    font-weight: 400;
+    outline: none;
+    border: 0;
+    display: none;
+    cursor: pointer;
+ 
+}
+
+#answer-buttons .btn.correct {
+    background-color: #A6E3A8 !important;
+    color: #113322;
+    border-color: #A6E3A8;
+}
+
+#answer-buttons .btn.incorrect {
+    background-color: #E2A6A6 !important;
+    color: #270808;
+    border-color: #E2A6A6;
+}
+
