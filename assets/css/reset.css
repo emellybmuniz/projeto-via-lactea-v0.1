@@ -1,26 +1,23 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-
-
 body {
     background: #000;
-    border: none;
     height: 100vh;
     box-sizing: border-box;
 }
 
-a { 
-    text-decoration: none;
+a {
     color: #fff;
+    text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }

@@ -12,6 +12,7 @@
     padding-bottom: 15px;
     margin: 30px 15px;
     font-weight: 500; 
+    max-width: 900px;
     border-bottom: 2px solid #bcbcbc;
     color: #c7c7c7;
 }

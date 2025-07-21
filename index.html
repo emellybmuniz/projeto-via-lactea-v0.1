@@ -32,10 +32,9 @@
                     <div class="break"></div>
                     <img src="assets/images/planet_saturn.png" alt="Saturno" class="planet saturn spin-normal">
                     <div class="break"></div>
-                    <img src="assets/images/planet_uranus.png" alt="Urâno" class="planet uranus spin-reverse"> 
+                    <img src="assets/images/planet_uranus.png" alt="Urano" class="planet uranus spin-reverse"> 
                     <img src="assets/images/planet_neptune.png" alt="Netuno" class="planet neptune spin-normal">
                 </div>
-
                 
                 <aside id="info-panel">
                     <h3 id="planet-name"></h3>
@@ -43,10 +42,14 @@
                 </aside>
             </div>
 
-
-        </section>
-        
+        </section>   
         <section class="menu">
+            <button class="close-menu">Começar Quiz</button>
+            <section id="planetDetails" class="details-panel">
+                <div class="planet-content">
+                    </div>
+            </section>
+
             <section class="app">
                 <div class="quiz">
                     <h3 id="question">Question</h3>
@@ -61,17 +64,19 @@
                         </button>
                     </div>
                 </div>
+
+            
             </section>
 
-            <footer class="menu-footer">
-                <a href="#top" class="scroll-top" aria-label="Voltar ao topo">
-                    <p>^</p>
-                </a>
+            <footer class="menu-button">
+                <div class="btn-menu">
+                    <a href="#" 
+                    onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" 
+                    aria-label="Recarregar a página e voltar ao topo">
+                   <p>^</p>
+                 </a>
+                </div>
             </footer>
-
-
-
-
         </section>
     </main>
 
@@ -84,7 +89,7 @@
             </a>
         </p>
     </footer>
-
+    <script src="assets/js/data.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/quiz.js"></script>
 </body>
